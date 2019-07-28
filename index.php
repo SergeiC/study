@@ -54,9 +54,8 @@
     $str=$_POST["a"];
     
     }
-    //$str="пудра";
+
     $result_set = $mysqli->query("SELECT products.name AS ProductName, products.price AS ProductPrice, companies.name AS CompanyName FROM products INNER JOIN companies ON products.company_id = companies.id WHERE products.name LIKE '%$str%'");
-    //$result_set =$mysqli->query ("SELECT * FROM `product` WHERE `name` LIKE '%$str%'");
     echo "<br /><br /><br />";
     printResult($result_set);
     
